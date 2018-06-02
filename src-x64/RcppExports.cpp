@@ -5,14 +5,14 @@
 
 using namespace Rcpp;
 
-// C_which_ColMins
-IntegerVector C_which_ColMins(NumericMatrix X);
-RcppExport SEXP _rowmins_C_which_ColMins(SEXP XSEXP) {
+// C_which_colMins
+IntegerVector C_which_colMins(NumericMatrix X);
+RcppExport SEXP _rowmins_C_which_colMins(SEXP XSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
-    rcpp_result_gen = Rcpp::wrap(C_which_ColMins(X));
+    rcpp_result_gen = Rcpp::wrap(C_which_colMins(X));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -27,25 +27,25 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// C_colMins
-NumericVector C_colMins(NumericMatrix X);
-RcppExport SEXP _rowmins_C_colMins(SEXP XSEXP) {
+// colMins
+NumericVector colMins(NumericMatrix X);
+RcppExport SEXP _rowmins_colMins(SEXP XSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
-    rcpp_result_gen = Rcpp::wrap(C_colMins(X));
+    rcpp_result_gen = Rcpp::wrap(colMins(X));
     return rcpp_result_gen;
 END_RCPP
 }
-// C_rowMins
-NumericVector C_rowMins(NumericMatrix X);
-RcppExport SEXP _rowmins_C_rowMins(SEXP XSEXP) {
+// rowMins
+NumericVector rowMins(NumericMatrix X);
+RcppExport SEXP _rowmins_rowMins(SEXP XSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
-    rcpp_result_gen = Rcpp::wrap(C_rowMins(X));
+    rcpp_result_gen = Rcpp::wrap(rowMins(X));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -71,38 +71,38 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// C_colMaxs
-NumericVector C_colMaxs(NumericMatrix X);
-RcppExport SEXP _rowmins_C_colMaxs(SEXP XSEXP) {
+// colMaxs
+NumericVector colMaxs(NumericMatrix X);
+RcppExport SEXP _rowmins_colMaxs(SEXP XSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
-    rcpp_result_gen = Rcpp::wrap(C_colMaxs(X));
+    rcpp_result_gen = Rcpp::wrap(colMaxs(X));
     return rcpp_result_gen;
 END_RCPP
 }
-// C_rowMaxs
-NumericVector C_rowMaxs(NumericMatrix X);
-RcppExport SEXP _rowmins_C_rowMaxs(SEXP XSEXP) {
+// rowMaxs
+NumericVector rowMaxs(NumericMatrix X);
+RcppExport SEXP _rowmins_rowMaxs(SEXP XSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
-    rcpp_result_gen = Rcpp::wrap(C_rowMaxs(X));
+    rcpp_result_gen = Rcpp::wrap(rowMaxs(X));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_rowmins_C_which_ColMins", (DL_FUNC) &_rowmins_C_which_ColMins, 1},
+    {"_rowmins_C_which_colMins", (DL_FUNC) &_rowmins_C_which_colMins, 1},
     {"_rowmins_C_which_rowMins", (DL_FUNC) &_rowmins_C_which_rowMins, 1},
-    {"_rowmins_C_colMins", (DL_FUNC) &_rowmins_C_colMins, 1},
-    {"_rowmins_C_rowMins", (DL_FUNC) &_rowmins_C_rowMins, 1},
+    {"_rowmins_colMins", (DL_FUNC) &_rowmins_colMins, 1},
+    {"_rowmins_rowMins", (DL_FUNC) &_rowmins_rowMins, 1},
     {"_rowmins_C_which_colMaxs", (DL_FUNC) &_rowmins_C_which_colMaxs, 1},
     {"_rowmins_C_which_rowMaxs", (DL_FUNC) &_rowmins_C_which_rowMaxs, 1},
-    {"_rowmins_C_colMaxs", (DL_FUNC) &_rowmins_C_colMaxs, 1},
-    {"_rowmins_C_rowMaxs", (DL_FUNC) &_rowmins_C_rowMaxs, 1},
+    {"_rowmins_colMaxs", (DL_FUNC) &_rowmins_colMaxs, 1},
+    {"_rowmins_rowMaxs", (DL_FUNC) &_rowmins_rowMaxs, 1},
     {NULL, NULL, 0}
 };
 

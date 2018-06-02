@@ -3,7 +3,7 @@ using namespace Rcpp;
 
 
 // [[Rcpp::export]]
-IntegerVector C_which_ColMins(NumericMatrix X) {
+IntegerVector C_which_colMins(NumericMatrix X) {
   int n = X.ncol();
   IntegerVector V(n);
   for (int i=0; i<n; i++) {
@@ -27,8 +27,10 @@ IntegerVector C_which_rowMins(NumericMatrix X) {
 	return V;
 }
 
+//' Computes quickly the minima of each column of a matrix
+//'
 // [[Rcpp::export]]
-NumericVector C_colMins(NumericMatrix X) {
+NumericVector colMins(NumericMatrix X) {
   int n = X.ncol();
   NumericVector V(n);
   for (int i=0; i<n; i++) {
@@ -38,8 +40,10 @@ NumericVector C_colMins(NumericMatrix X) {
   return V;
 }
 
+//' Computes quickly the minima of each row of a matrix
+//' 
 // [[Rcpp::export]]
-NumericVector C_rowMins(NumericMatrix X) {
+NumericVector rowMins(NumericMatrix X) {
   int n = X.nrow();
   NumericVector V(n);
   for (int i=0; i<n; i++) {
@@ -71,8 +75,10 @@ IntegerVector C_which_rowMaxs(NumericMatrix X) {
 	return(V);
 }
 
+//' Computes quickly the maxima of each column of a matrix
+//' 
 // [[Rcpp::export]]
-NumericVector C_colMaxs(NumericMatrix X) {
+NumericVector colMaxs(NumericMatrix X) {
   int n = X.ncol();
 	NumericVector V(n);
 	for (int i=0; i<n; i++) {
@@ -82,8 +88,10 @@ NumericVector C_colMaxs(NumericMatrix X) {
 	return(V);
 }
 
+//' Computes quickly the maxima of each row of a matrix
+//' 
 // [[Rcpp::export]]
-NumericVector C_rowMaxs(NumericMatrix X) {
+NumericVector rowMaxs(NumericMatrix X) {
   int n = X.nrow();
 	NumericVector V(n);
 	for (int i=0; i<n; i++) {
